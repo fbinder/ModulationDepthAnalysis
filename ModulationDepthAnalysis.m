@@ -22,19 +22,17 @@ clc;
 tic;
 
 %% USER INPUT
-% File import and variable definition
-fileName = 'zpp_R254_Acrylpresse_vMuster3_v2_170kV250uA2s8x2BM025Cu2050Proj280X 2023-1-27 20-18-29.vgi';
-filePath = 'C:\Users\bnd.FMT\Desktop\PaperSegmentation_v10\Measurement\Wdh\';
+% Variable definitions
 expectedPeaks   = 38;     % [-] - Number of expected peaks
 paperThickness  = 130;    % [um] - Minimal paper thickness
-p2pMin          = paperThickness;    % [um] - Minimal peak-to-peak distance
-p2pMax          = 396;               % [um] - Constructed max peak-to-peak distance
-voxelSize       = 42.1205204786074;  % [um] - Reconstructed voxel size
+voxelSize       = 42.12;  % [um] - Reconstructed voxel size
 angularIterations = 360;  % [-] - Angular iterations steps in between 0°-360°
 
+% #####################################################################
 % PLEASE ASSIGN A RECONSTRUCTED UINT16 VOLUME TO THE VARIABLE RAWVOLUME
 % If you need to switch dimension, use "permute()".
-rawVolume = zeros(2048,2048,2048, 'uint16');
+% #####################################################################
+rawVolume = zeros(2048,2048,2048, 'uint16'); % zeros only for dummy value
 
 %% Main
 minion = bnd.FctHelper();
@@ -185,6 +183,13 @@ fitFunction = fittype('a*x^2+b*x+c');
 aCoefficient = fittedCurve.a;
 bCoefficient = fittedCurve.b;
 cCoefficient = fittedCurve.c;
+
+% #####################################################################
+% PLEASE NOTE THAT THE FIGURES ARE SPECIFIC TO THE DATA FROM THE
+% PUBLICATION.
+% Limit values are hardcoded. If used for other data, please adjust the
+% limits for proper display.
+% #####################################################################
 
 % left figure
 figure();

@@ -27,21 +27,21 @@ classdef FctHelper < handle
             obj.brightGreyColormap = obj.brightGreyColormap.BrightGreyColormap;
 
             % Define colors
-            obj.colors.cBlack = [0, 0, 0];
-            obj.colors.cWhite = [1, 1, 1];
-            obj.colors.cYellow = [1, 1, 0];
-            obj.colors.cfauBlue = [18/255, 49/255, 101/255];
-            obj.colors.cfauGrey = [153/255, 153/255, 153/255];
-            obj.colors.ctmLightBlue = hex2rgb('#88CCEE');
-            obj.colors.ctmBlueGreenish = hex2rgb('#44AA99');
-            obj.colors.ctmDarkGreen = hex2rgb('#117733');
-            obj.colors.ctmDarkBlue = hex2rgb('#332288');
-            obj.colors.ctmOcher = hex2rgb('#DDCC77');
-            obj.colors.ctmLime= hex2rgb('#999933');
-            obj.colors.ctmLightPink = hex2rgb('#CC6677');
-            obj.colors.ctmDeepPurple = hex2rgb('#882255');
-            obj.colors.ctmViolet = hex2rgb('#AA4499');
-            obj.colors.ctmLightGrey = hex2rgb('#DDDDDD');
+            obj.colors.cBlack = [0.0000, 0.0000, 0.0000];
+            obj.colors.cWhite = [1.0000, 1.0000, 1.0000];
+            obj.colors.cYellow = [1.0000, 1.0000, 0.0000];
+            obj.colors.cfauBlue = [0.0706, 0.1922, 0.3961];
+            obj.colors.cfauGrey = [0.6000, 0.6000, 0.6000];
+            obj.colors.ctmLightBlue = [0.5333, 0.8000, 0.9333];
+            obj.colors.ctmBlueGreenish = [0.2667, 0.6667, 0.6000];
+            obj.colors.ctmDarkGreen = [0.0667, 0.4667, 0.2000];
+            obj.colors.ctmDarkBlue = [0.2000, 0.1333, 0.5333];
+            obj.colors.ctmOcher = [0.8667, 0.8000, 0.4667];
+            obj.colors.ctmLime = [0.6000, 0.6000, 0.2000];
+            obj.colors.ctmLightPink = [0.8000, 0.4000, 0.4667];
+            obj.colors.ctmDeepPurple = [0.5333, 0.1333, 0.3333];
+            obj.colors.ctmViolet = [0.6667, 0.2667, 0.6000];
+            obj.colors.ctmLightGrey = [0.8667, 0.8667, 0.8667];
         end
 
         % Fct: Normalizes a uint16 image to max contrast (0-65535)
